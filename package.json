@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cengiz-a/WBA2SS16W1/issues"
   },
-  "homepage": "https://github.com/cengiz-a/WBA2SS16W1#readme"
+  "homepage": "https://github.com/cengiz-a/WBA2SS16W1#readme",
+  "dependencies": {
+    "chalk": "^1.1.3"
+  }
 }

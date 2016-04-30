@@ -1,4 +1,6 @@
 var fs = require('fs');
+var myChalk = require('chalk');
+
 
 fs.readFile("./wolkenkratzer.json", function(err, data) {
 
@@ -6,9 +8,9 @@ fs.readFile("./wolkenkratzer.json", function(err, data) {
 
 	for( var i = 0; i < jsonObjekt.wolkenkratzer.length; i++) {
 
-		console.log("Name: " + jsonObjekt.wolkenkratzer[i].name);
-		console.log("Stadt: " + jsonObjekt.wolkenkratzer[i].stadt);
-		console.log("Hoehe: " + jsonObjekt.wolkenkratzer[i].hoehe);
+		console.log(myChalk.red.bold("Name: " + jsonObjekt.wolkenkratzer[i].name));
+		console.log(myChalk.blue("Stadt: " + jsonObjekt.wolkenkratzer[i].stadt));
+		console.log(myChalk.green("Hoehe: " + jsonObjekt.wolkenkratzer[i].hoehe));
 		console.log("--------------------");
 
 	}
