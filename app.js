@@ -2,6 +2,7 @@ var fs = require('fs');
 var myChalk = require('chalk');
 
 
+
 fs.readFile("./wolkenkratzer.json", function(err, data) {
 
 	var jsonObjekt = JSON.parse(data.toString());
@@ -14,7 +15,62 @@ fs.readFile("./wolkenkratzer.json", function(err, data) {
 		console.log("--------------------");
 
 	}
+
+
+	jsonObjekt.wolkenkratzer.sort( function(a, b) {
+
+		if (a.hoehe > b.hoehe) {
+			return -1;
+		}
+		if(a.hoehe < b.hoehe) {
+			return 1;
+		}
+		return 0;
+
+	});
+
+
+	fs.writeFile("./wolkenkratzer_sortiert.json", JSON.stringify(jsonObjekt), function(err) {});
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
