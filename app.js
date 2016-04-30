@@ -1,0 +1,18 @@
+var fs = require('fs');
+
+fs.readFile("./wolkenkratzer.json", function(err, data) {
+
+	var jsonObjekt = JSON.parse(data.toString());
+
+	for( var i = 0; i < jsonObjekt.wolkenkratzer.length; i++) {
+
+		console.log("Name: " + jsonObjekt.wolkenkratzer[i].name);
+		console.log("Stadt: " + jsonObjekt.wolkenkratzer[i].stadt);
+		console.log("Hoehe: " + jsonObjekt.wolkenkratzer[i].hoehe);
+		console.log("--------------------");
+
+	}
+});
+
+
+
